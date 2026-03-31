@@ -1,6 +1,7 @@
 import customtkinter as ctk
 import tkinter as tk
 from tkinter import messagebox
+from datetime import datetime
 import json
 import os
 
@@ -29,6 +30,15 @@ def load_task():
 
 load_task()
 
+def check_dates():
+    today = datetime.now().strftime("%d-%m-%Y")
+
+    for task in tasks:
+        if task['date'] == today and not task['done']:
+            messagebox.showinfo('Reminder 🔔', f"Task Due Today:\n{task['title']}")
+            task["notified"] = True
+            save_task()
+            
 def add_task():
     title = title_bar.get()
     desc = desc_bar.get('1.0', 'end').strip()
@@ -234,5 +244,6 @@ scroll_task = ctk.CTkScrollableFrame(right_frame)
 scroll_task.pack(fill='both', expand=True, padx=10, pady=10)
 
 show_task()
+check_dates()
 
 root.mainloop()
