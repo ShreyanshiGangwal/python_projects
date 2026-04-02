@@ -7,25 +7,26 @@ import pyperclip
 root = ctk.CTk()
 root.title('🔐 Password Generator')
 root.geometry('800x650')
+root.configure(fg_color="#0f172a")
+
 # -------- THEME ---------
 ctk.set_appearance_mode('dark')
 ctk.set_default_color_theme('blue') 
 
-root.configure(fg_color="#0f172a")
-
 # -------- PASSWORD FIELD ---------
 frame = ctk.CTkFrame(
     root,
-    width=350,
-    height=500,
+    width=320,
+    height=590,
     corner_radius=25,
     fg_color="#1e1b4b",
     border_width=2,
     border_color="#38bdf8"
 )
 frame.place(relx=0.5, rely=0.5, anchor='center')
+frame.pack_propagate(False)
 
-title = ctk.CTkLabel(frame, text="     PASSWORD GENERATOR     ", font=('Arial', 20, 'bold'), text_color="#38bdf8")
+title = ctk.CTkLabel(frame, text="PASSWORD GENERATOR", font=('Arial', 20, 'bold'), text_color="#38bdf8")
 title.pack(pady=25)
 
 pass_box = ctk.CTkEntry(
@@ -38,7 +39,7 @@ pass_box = ctk.CTkEntry(
     border_color="#38bdf8",
     border_width=1
 )
-pass_box.pack(pady=15)
+pass_box.pack(pady=10)
 
 # -------- PASSWORD LENGTH ---------
 length_frame = ctk.CTkFrame(frame, fg_color='transparent')
@@ -51,7 +52,7 @@ length.pack()
 def update_length(value):
     length.configure(text = f'Password Length: {int(value)}')
 
-## -------- CREATE SLIDER ---------
+# -------- CREATE SLIDER ---------
 slider = ctk.CTkSlider(
     length_frame,
     from_= 4,

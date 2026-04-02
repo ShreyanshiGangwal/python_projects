@@ -8,6 +8,7 @@ root.geometry("320x550+500+100")
 is_dark = False
 all_buttons = []
 
+# ------- SET THEME FUNCTION -------
 def set_theme():
     global bg, fg, btn_bg, op_bg
 
@@ -26,7 +27,6 @@ def set_theme():
     display.configure(bg=bg, fg=fg)
     history_label.configure(bg=bg, fg=fg)
 
-
     for btn in all_buttons:
         text = btn['text']
         if text in ['/', '*', '-', '+', '=']:
@@ -36,7 +36,6 @@ def set_theme():
 
     toggle_btn.configure(bg=btn_bg, fg=fg)
 
-
 # ---------------- DISPLAY ----------------
 history_label = tk.Label(root, text="", anchor="e", font=("Arial", 12))
 history_label.pack(fill="both", padx=10)
@@ -44,7 +43,7 @@ history_label.pack(fill="both", padx=10)
 display = tk.Entry(root, font=("Arial", 24), bd=1, relief='ridge', justify="right")
 display.pack(fill="both", ipadx=8, ipady=20, padx=10, pady=10)
 
-# ---------------- FUNCTIONS ----------------
+# ---------------- CLICK FUNCTION ----------------
 def click(value):
     if value == "=":
         try:
@@ -85,7 +84,7 @@ def on_leave(e):
         e.widget['bg'] = btn_bg
 
 
-# ---------------- BUTTONS ----------------
+# -------- BUTTONS & FUNCTION ---------
 frame = tk.Frame(root)
 frame.pack()
 

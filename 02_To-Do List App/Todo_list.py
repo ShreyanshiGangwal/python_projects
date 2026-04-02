@@ -30,6 +30,7 @@ def load_task():
 
 load_task()
 
+# ------ CHECK DATES FUNCTION -------
 def check_dates():
     today = datetime.now().strftime("%d-%m-%Y")
 
@@ -38,7 +39,8 @@ def check_dates():
             messagebox.showinfo('Reminder 🔔', f"Task Due Today:\n{task['title']}")
             task["notified"] = True
             save_task()
-            
+
+# ------- ADD TASK FUNCTION --------
 def add_task():
     title = title_bar.get()
     desc = desc_bar.get('1.0', 'end').strip()
@@ -65,17 +67,20 @@ def add_task():
     desc_bar.delete('1.0', 'end')
     date_bar.delete(0, 'end')
 
+# -------- DELETE TASK FUNCTION ---------
 def delete_task(index):
     tasks.pop(index)
     show_task()
     save_task()
 
+# -------- MARK DONE FUNCTION ---------
 def mark_done(index):
     if not tasks[index]['done']:
         tasks[index]['done'] = True
         show_task()
         save_task()
 
+# -------- EDIT TASK FUNCTION --------
 def edit_task(index):
     edit_win = ctk.CTkToplevel(root)     # Create Edit Window
     edit_win.title('Edit Task')
@@ -104,7 +109,8 @@ def edit_task(index):
         variable=priority,
         values=['Low', 'Medium', 'High']
     ).pack(pady=5)
-
+    
+    # ---- SAVE EDIT FUNCTION ----
     def save_edit():
         task['title'] = title.get()
         task['desc'] = desc.get('1.0', 'end').strip()
@@ -117,10 +123,12 @@ def edit_task(index):
 
     ctk.CTkButton(edit_win, text='Save', command=save_edit).pack(pady=10)
 
+# -------- SEARCH FUNCTION ---------
 def search_task():
     keyword = search_bar.get().lower()
     show_task(new_keyword=keyword)
 
+# -------- SHOW TASK FUNCTION --------
 def show_task(new_keyword=''):
     [cards.destroy() for cards in scroll_task.winfo_children()]
 
@@ -144,9 +152,11 @@ def show_task(new_keyword=''):
 
     progress_bar.configure(text=f"✅ {done_tasks}/{total_tasks}")
 
+# -------- CREATE TASK CARDS FUNCTION -------
 def task_card(task, index):
     color = '#2a2d2e' if not task['done'] else '#383B6D'
 
+    # card frame
     card = ctk.CTkFrame(scroll_task, corner_radius=10, fg_color=color)
     card.pack(fill='x', padx=5, pady=5)
 
@@ -170,6 +180,7 @@ def task_card(task, index):
     btn_frame = ctk.CTkFrame(card, fg_color='transparent')
     btn_frame.pack(anchor='e', padx=10, pady=5)
 
+    # ---- DONE, DELETE & EDIT BTNs ----
     ctk.CTkButton(btn_frame, text='Done', width=70, command=lambda: mark_done(index)).pack(side='left', padx=5)
     ctk.CTkButton(btn_frame, text='Delete', width=70, fg_color='red', command=lambda: delete_task(index)).pack(side='left', padx=5)
     ctk.CTkButton(btn_frame, text='Edit', width=70, command=lambda: edit_task(index)).pack(side='left', padx=5)
