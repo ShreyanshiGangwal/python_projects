@@ -36,30 +36,6 @@ To-Do List App/
 │── tasks.json
 │── README.md
 ```
-
----
-
-## ⚙️ Installation & Setup
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/ShreyanshiGangwal/python_projects.git
-cd python_projects
-```
-
-### 2. Install Dependencies
-
-```bash
-pip install customtkinter
-```
-
-### 3. Run the App
-
-```bash
-python Todo_list.py
-```
-
 ---
 
 ## 🧠 How It Works
