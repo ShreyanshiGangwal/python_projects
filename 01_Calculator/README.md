@@ -1,39 +1,51 @@
-# 🧮 Calculator (Python Tkinter)
+# 🧮 Advanced Calculator (Python Tkinter)
+
 A modern and interactive calculator built using Python's Tkinter library with a clean UI and advanced features.
 Designed to enhance GUI development skills with real-world features.
 
-## 🚀 Live Preview
-💡 A simple yet elegant desktop calculator with theme switching and smooth UI interactions.
+---
 
-### 🌟 Features
-- 🌗 Light & Dark Theme Toggle
-- 🧠 Calculation History Display
-- 🎯 Hover Effects on Buttons
-- 🖱️ Interactive Cursor (Hand Pointer)
-- ⚙️ Real-time Expression Evaluation
-- 💻 Clean & Minimal UI Design
+## 🚀 Features
 
-### 🛠️ Tech Stack
-Technology Usage
-- 🐍 Python for Core Logic
-- 🎨 Tkinter for GUI Development
+✨ Light & Dark Theme Toggle
+🧠 Calculation History Display
+🎯 Hover Effects on Buttons
+🖱️ Cursor Changes (Hand Pointer on Hover)
+⚙️ Real-time Expression Evaluation
+💻 Clean and User-Friendly Interface
 
-### 🧠 What I Learned
-- GUI development using Tkinter
-- Event handling (click, hover effects)
-- Theme switching logic
-- Managing layouts using grid()
-- Handling user input & evaluation
+---
 
-### 🔮 Future Enhancements
-- ⌨️ Keyboard Input Support
-- ⬅️ Backspace Button
-- 📜 Advanced History Panel
-- 🔬 Scientific Calculator Functions
-- 📱 Convert into Mobile App
+## 🛠️ Technologies Used
 
-### ⭐ Show Some Love
-If you like this project, consider giving it a ⭐ on GitHub!
+* Python 🐍
+* Tkinter (GUI Library)
 
-## 📌 Note
-This project was built as a mini project to strengthen Python and GUI concepts.
+---
+
+## 📸 Screenshot
+
+---
+
+## 💡 Learning Outcomes
+
+* GUI Development using Tkinter
+* Event Handling (Click, Hover)
+* Theme Switching Logic
+* Use of Python `eval()` function
+* Layout Management using `grid()`
+
+---
+
+## 📌 Future Improvements
+
+* ⌨️ Keyboard Input Support
+* ⬅️ Backspace Button
+* 📜 Full History Panel
+* 🔬 Scientific Calculator Features
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
