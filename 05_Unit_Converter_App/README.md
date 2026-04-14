@@ -25,11 +25,6 @@ This app allows users to easily convert values between different units with a cl
 
 ---
 
-## 🖼️ Preview
-
-
----
-
 ## 🚀 Technologies Used
 
 * Python 🐍

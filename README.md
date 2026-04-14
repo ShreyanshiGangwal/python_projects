@@ -60,16 +60,6 @@ A multi-purpose unit converter with category selection.
 
 ---
 
-## 📸 Preview 
-
-Example:
-
-```
-ss
-```
-
----
-
 ## 📂 Project Structure
 
 ```

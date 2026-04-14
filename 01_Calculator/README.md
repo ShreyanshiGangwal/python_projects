@@ -23,10 +23,6 @@ Designed to enhance GUI development skills with real-world features.
 
 ---
 
-## 📸 Screenshot
-
----
-
 ## 💡 Learning Outcomes
 
 * GUI Development using Tkinter

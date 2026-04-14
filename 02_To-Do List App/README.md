@@ -62,10 +62,6 @@ To-Do List App/
 
 ---
 
-## 📸 Screenshots
-
----
-
 ## ⭐ Support
 
 If you like this project, give it a ⭐ on GitHub!

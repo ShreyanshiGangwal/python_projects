@@ -21,17 +21,6 @@ This app allows users to generate secure, customizable passwords with a beautifu
 
 ---
 
-## 🖼️ Screenshots
-
-> Add your screenshots here 👇
-
-```
-![App Screenshot](screenshot1.png)
-![App Screenshot](screenshot2.png)
-```
-
----
-
 ## 🛠️ Tech Stack
 
 * **Python**
